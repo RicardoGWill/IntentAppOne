@@ -13,13 +13,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    public void goToIntentAppTwoImplicitIntent(View view) {
+        Intent implicitIntentToAppTwo = new Intent("com.ricardogwill.intentapptwo");
+        startActivity(implicitIntentToAppTwo);
+    }
+
     public void goToActivity2ExplicitIntent(View view) {
         Intent explicitIntent = new Intent(getApplicationContext(), Activity2.class);
         startActivity(explicitIntent);
     }
 
-    public void goToIntentAppTwoImplicitIntent(View view) {
-        Intent implicitIntentToAppTwo = new Intent("com.ricardogwill.intentapptwo");
-        startActivity(implicitIntentToAppTwo);
-    }
 }
